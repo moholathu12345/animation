@@ -168,6 +168,66 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 }
 .card h3{margin:0 0 10px; font-size: 16px}
 
+.about-layout{
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 16px;
+  align-items: start;
+  margin-top: 10px;
+}
+.about-info{
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.about-info .row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.about-info .label{
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.about-info .value{
+  font-weight: 800;
+  text-align: left;
+  word-break: break-word;
+}
+
+.about-right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.avatar-top{
+  width: 220px;
+  height: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+@media (max-width: 900px){
+  .about-layout{
+    grid-template-columns: 1fr;
+  }
+  .about-right{
+    justify-content: flex-start;
+  }
+  .avatar-top{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+}
+
 .tile{
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -183,14 +243,22 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 .value{font-weight:800}
 
 .media-row{display:flex; gap:12px; align-items:center; margin-top: 12px}
+.photo-wrap{
+  margin-top: 16px;
+}
+
 .avatar{
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
+
+
 
 .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-top: 12px}
 .badge{

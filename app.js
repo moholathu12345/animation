@@ -1,60 +1,101 @@
+/* ============================================
+   APP.JS — Vanilla JavaScript
+   Ashveen Dev Menon · GTP1302 Guided Learning
+   ============================================ */
+
 (function () {
-  const navLinks = document.getElementById("navLinks");
-  const menuBtn = document.getElementById("menuBtn");
-  const lastUpdated = document.getElementById("lastUpdated");
+  'use strict';
 
-  const ids = ["introduction", "content", "learning-contract", "reflection", "downloads"];
+  // ---- Sticky Nav Scroll Effect ----
+  const nav = document.getElementById('nav');
+  if (nav) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 30) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
 
-  function setActive(id) {
-    document.querySelectorAll(".nav-link").forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.link === id);
+  // ---- Mobile Hamburger Menu ----
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
     });
   }
 
-  function scrollToId(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  // ---- Scroll Fade-In (IntersectionObserver) ----
+  const fadeElements = document.querySelectorAll('.fade-in-up');
+
+  if ('IntersectionObserver' in window && fadeElements.length > 0) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Stop observing once visible
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    fadeElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: show everything if IntersectionObserver not supported
+    fadeElements.forEach(function (el) {
+      el.classList.add('visible');
+    });
   }
 
-  // Desktop + mobile link clicks
-  document.querySelectorAll("[data-link]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const id = el.getAttribute("data-link");
-      if (!id) return;
+  // ---- Week Entry Toggles (Journey page) ----
+  const weekToggles = document.querySelectorAll('.week-toggle');
 
-      // prevent brand anchor default jump
-      if (el.tagName.toLowerCase() === "a") e.preventDefault();
+  weekToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      const body = toggle.nextElementSibling;
 
-      scrollToId(id);
-      navLinks.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
+      toggle.setAttribute('aria-expanded', !expanded);
+
+      if (body) {
+        if (expanded) {
+          body.setAttribute('hidden', '');
+        } else {
+          body.removeAttribute('hidden');
+        }
+      }
     });
   });
 
-  // Mobile menu toggle
-  menuBtn.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  // ---- Smooth Scroll for anchor links ----
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
   });
 
-  // Scrollspy
-  function onScroll() {
-    const y = window.scrollY + 120;
-    let current = ids[0];
-
-    for (const id of ids) {
-      const el = document.getElementById(id);
-      if (el && el.offsetTop <= y) current = id;
-    }
-    setActive(current);
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  // Last updated
-  if (lastUpdated) {
-    lastUpdated.textContent = new Date().toLocaleString();
-  }
 })();

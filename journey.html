@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journey — My First Animation Project</title>
+  <meta name="description" content="A weekly learning journey of learning 3D animation in Blender." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Evidence Hub */
+    .evidence-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+    .evidence-card{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;background:rgba(255,255,255,.05);text-decoration:none;color:inherit}
+    .evidence-card:hover{background:rgba(255,255,255,.07)}
+    .evidence-kicker{font-size:12px;opacity:.75;margin-bottom:6px}
+    .evidence-title{font-size:16px;font-weight:700;margin-bottom:4px}
+    .evidence-meta{font-size:12px;opacity:.75;margin-bottom:12px}
+    .evidence-mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .evidence-mini video,.evidence-final{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.25)}
+    .video-embed{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.25)}
+    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    @media (max-width:720px){.evidence-mini{grid-template-columns:1fr}}
+
+    /* Journal: mix of “chill weeks” and “deep dive weeks” */
+    .journal-grid{display:grid;gap:14px;margin-top:18px}
+    .week-card{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      padding:14px;
+    }
+    .week-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .week-badge{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(122,167,255,.28);
+      background:rgba(122,167,255,.10);
+      opacity:.9;
+      white-space:nowrap;
+    }
+    .week-title{margin:0;font-size:16px;line-height:1.2}
+    .week-mini{margin-top:8px;opacity:.85;line-height:1.6}
+    .week-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);opacity:.9}
+    .evi-link{display:inline-block;margin-top:10px;font-size:13px;opacity:.9;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+    .evi-link:hover{opacity:1}
+
+    details.deep{padding:0}
+    details.deep > summary{
+      list-style:none;
+      cursor:pointer;
+      padding:0;
+      margin:0;
+    }
+    details.deep > summary::-webkit-details-marker{display:none}
+    .deep-body{margin-top:12px;opacity:.88;line-height:1.65}
+    .deep-body h4{margin:14px 0 6px;font-size:13px;letter-spacing:.2px;text-transform:uppercase;opacity:.8}
+    .deep-body p{margin:0 0 10px}
+    .note{opacity:.75;font-style:italic}
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ashveen Dev Menon</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html" class="active">Journey</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container narrow">
+      <p class="section-label">The Process</p>
+      <h1>My Journey (Weeks 1–17)</h1>
+      <p class="page-header-sub">
+        Not every week was dramatic. Some weeks were steady progress, practice, and polish.
+        I documented the full journey, and kept evidence to a few strong artifacts.
+      </p>
+    </div>
+  </header>
+
+  <!-- Evidence Hub -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="phase fade-in-up">
+        <h2 class="phase-title">Evidence Hub <span class="phase-range">4 Key Artifacts</span></h2>
+        <p class="phase-desc">These are the main pieces I captured. Weeks below link back here when relevant.</p>
+      </div>
+
+<div class="evidence-card" id="ev-week4">
+  <div class="evidence-kicker">Milestone</div>
+  <div class="evidence-title">Week 4 — Motion Test (YouTube)</div>
+  <div class="evidence-meta">Early milestone: timing + movement tests</div>
+
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube.com/embed/UjJLkhkTBE4?si=HE1fpT7_BhBqU8ND"
+      title="First Animation - Week 4 Motion Test"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+          <div class="evidence-kicker">Milestone</div>
+          <div class="evidence-title">Week 4 — Motion Test (YouTube)</div>
+          <div class="evidence-meta">Early milestone: timing + movement tests</div>
+
+
+<div class="evidence-card" id="ev-prototypes">
+
+          
+          <div class="evidence-kicker">Prototypes</div>
+          <div class="evidence-title">Prototype Set (4 clips)</div>
+          <div class="evidence-meta">Iterative tests leading to the final animation</div>
+          <div class="evidence-mini">
+<video controls preload="metadata">
+  <source src="evidence/evidence1.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata">
+  <source src="evidence/evidence2.mp4" type="video/mp4">
+</video>
+<video controls preload="metadata">
+  <source src="evidence/evidence3.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata">
+  <source src="evidence/evidence4.mp4" type="video/mp4">
+</video>
+
+          </div>
+        </div>
+
+<div class="evidence-card" id="ev-week12">
+  <div class="evidence-kicker">Final Output</div>
+  <div class="evidence-title">Week 12 — Final Rendering + Effects (YouTube)</div>
+  <div class="evidence-meta">Full piece with presentation and effects</div>
+
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube.com/embed/WakR0H8g4CY?si=fXFK4BAx5jVecnb_"
+      title="Final Animation"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+<section class="section">
+  <div class="container narrow">
+  <!-- Journal -->
+ <div class="journal-grid">
+
+  <!-- ANCHOR: Week 1–2 -->
+  <details class="week-card deep fade-in-up" open>
+    <summary>
+      <div class="week-top">
+        <div>
+          <div class="week-badge">Week 1–2</div>
+          <h3 class="week-title">Software installation and interface familiarization</h3>
+          <div class="week-tags">
+            <span class="tag">Setup</span><span class="tag">UI</span><span class="tag">Workflow</span>
+          </div>
+          <p class="week-mini">Set up Blender and learned the basics so I could start animating instead of just exploring.</p>
+        </div>
+        <div class="week-badge">Anchor</div>
+      </div>
+    </summary>
+    <div class="deep-body">
+      <h4>What I tried</h4>
+      <p>Navigation, timeline controls, keyframes, and quick playblasts to review motion properly.</p>
+      <h4>What went wrong</h4>
+      <p>The interface felt overwhelming at first and I kept jumping between tools without understanding the workflow.</p>
+      <h4>What I changed</h4>
+      <p>I committed to a simple loop: pose, keyframe, playback, adjust. That made Blender feel manageable.</p>
+      <h4>What I learned</h4>
+      <p>Once the workflow is clear, progress becomes consistent.</p>
+    </div>
+  </details>
+
+  <!-- FLUFF: Week 3 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 3</div>
+        <h3 class="week-title">Prepping for the first motion test</h3>
+        <div class="week-tags">
+          <span class="tag">Warm-up</span><span class="tag">Practice</span>
+        </div>
+        <p class="week-mini">Did small movement experiments and got comfortable placing keyframes before attempting a proper motion test.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANCHOR: Week 4 -->
+  <details class="week-card deep fade-in-up">
+    <summary>
+      <div class="week-top">
+        <div>
+          <div class="week-badge">Week 4</div>
+          <h3 class="week-title">Basic motion tests and keyframe animation</h3>
+          <div class="week-tags">
+            <span class="tag">Timing</span><span class="tag">Keyframes</span><span class="tag">Milestone</span>
+          </div>
+          <p class="week-mini">First milestone. I could finally animate something and learn from what looked wrong.</p>
+        </div>
+        <div class="week-badge">Evidence</div>
+      </div>
+    </summary>
+    <div class="deep-body">
+      <h4>Evidence</h4>
+      <a class="evi-link" href="#ev-week4">Jump to Week 4 evidence</a>
+      <h4>What I learned</h4>
+      <p>More keyframes did not fix floaty motion. Timing and spacing did.</p>
+    </div>
+  </details>
+
+  <!-- FLUFF: Week 5 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 5</div>
+        <h3 class="week-title">Building consistency after the first test</h3>
+        <div class="week-tags">
+          <span class="tag">Repetition</span><span class="tag">Control</span>
+        </div>
+        <p class="week-mini">Repeated short motion tests to make my keyframing cleaner and reduce stiffness.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLUFF: Week 6 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 6</div>
+        <h3 class="week-title">Early pose planning</h3>
+        <div class="week-tags">
+          <span class="tag">Poses</span><span class="tag">Planning</span>
+        </div>
+        <p class="week-mini">Started thinking in key poses instead of trying to animate everything smoothly from the start.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANCHOR: Week 7 -->
+  <details class="week-card deep fade-in-up">
+    <summary>
+      <div class="week-top">
+        <div>
+          <div class="week-badge">Week 7</div>
+          <h3 class="week-title">Key poses and timing refinement</h3>
+          <div class="week-tags">
+            <span class="tag">Poses</span><span class="tag">Timing</span><span class="tag">Refine</span>
+          </div>
+          <p class="week-mini">Locked clearer poses and refined timing so the movement read better and felt intentional.</p>
+        </div>
+        <div class="week-badge">Anchor</div>
+      </div>
+    </summary>
+    <div class="deep-body">
+      <h4>Reference used</h4>
+      <a class="evi-link" href="https://www.tiktok.com/@ley14332/video/7495835895275392279?q=dante%20dance&t=1769652601935" target="_blank" rel="noopener">Open reference</a>
+      <h4>What I learned</h4>
+      <p>Clear poses make timing refinement meaningful. If the pose is weak, timing polish does not help.</p>
+    </div>
+  </details>
+
+  <!-- FLUFF: Week 8 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 8</div>
+        <h3 class="week-title">Preparing for music sync</h3>
+        <div class="week-tags">
+          <span class="tag">Cleanup</span><span class="tag">Rhythm</span>
+        </div>
+        <p class="week-mini">Cleaned up sections so I could focus on syncing accents to beats without fighting messy motion.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANCHOR: Week 9 -->
+  <details class="week-card deep fade-in-up">
+    <summary>
+      <div class="week-top">
+        <div>
+          <div class="week-badge">Week 9</div>
+          <h3 class="week-title">Music sync and beat matching</h3>
+          <div class="week-tags">
+            <span class="tag">Music</span><span class="tag">Beat Sync</span><span class="tag">Timing</span>
+          </div>
+          <p class="week-mini">Turning point. Once movement accents hit the beat, the dance finally felt structured.</p>
+        </div>
+        <div class="week-badge">Evidence</div>
+      </div>
+    </summary>
+    <div class="deep-body">
+      <h4>Evidence (beat sync prototype)</h4>
+      <video controls preload="metadata">
+        <source src="evidence/evidence3.mp4" type="video/mp4">
+      </video>
+      <h4>What I learned</h4>
+      <p>Small timing shifts affect the whole sequence. I had to lock sections one by one instead of retiming everything at once.</p>
+    </div>
+  </details>
+
+  <!-- FLUFF: Week 10 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 10</div>
+        <h3 class="week-title">Presentation planning (camera and staging)</h3>
+        <div class="week-tags">
+          <span class="tag">Camera</span><span class="tag">Staging</span>
+        </div>
+        <p class="week-mini">Started thinking about how the animation would be viewed, not just how it moved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLUFF: Week 11 -->
+  <div class="week-card fade-in-up">
+    <div class="week-top">
+      <div>
+        <div class="week-badge">Week 11</div>
+        <h3 class="week-title">Lighting experiments for mood</h3>
+        <div class="week-tags">
+          <span class="tag">Lighting</span><span class="tag">Mood</span>
+        </div>
+        <p class="week-mini">Tested lighting choices so the character stayed readable while still having atmosphere.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANCHOR: Week 12 -->
+  <details class="week-card deep fade-in-up">
+    <summary>
+      <div class="week-top">
+        <div>
+          <div class="week-badge">Week 12</div>
+          <h3 class="week-title">Final rendering and effects</h3>
+          <div class="week-tags">
+            <span class="tag">Render</span><span class="tag">Effects</span><span class="tag">Final</span>
+          </div>
+          <p class="week-mini">Final milestone. Rendered the complete piece with the full presentation and polish.</p>
+        </div>
+        <div class="week-badge">Evidence</div>
+      </div>
+    </summary>
+    <div class="deep-body">
+      <h4>Evidence</h4>
+      <a class="evi-link" href="#ev-week12">Jump to Week 12 evidence</a>
+      <h4>What I learned</h4>
+      <p>Finishing matters. A complete polished output teaches more than endless tweaking.</p>
+    </div>
+  </details>
+  </div>
+</section>
+  <footer class="footer">
+    <p>&copy; 2025 Ashveen Dev Menon · GTP1302 Guided Learning</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
